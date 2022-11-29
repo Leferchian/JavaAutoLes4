@@ -1,14 +1,11 @@
 package ru.netology;
 
-import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Calendar;
 import java.util.Date;
-
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;

@@ -17,8 +17,8 @@ public class CardDeliveryFormTest {
         open("http://localhost:9999");
 
         Calendar date = Calendar.getInstance(); // передаем текущую дату
-        date.add(Calendar.MONTH, 5);
-        String valueDate= new SimpleDateFormat("dd.mm.yyyy").format(date.getTime());
+        date.add(Calendar.DATE, 5);
+        String valueDate= new SimpleDateFormat("dd.MM.yyyy").format(date.getTime());
 
         $("[placeholder='Город']").setValue("Иваново");
         $("div [data-test-id='date'] input").doubleClick().sendKeys(" ");

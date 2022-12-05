@@ -1,5 +1,6 @@
 package ru.netology;
 
+import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -36,5 +37,8 @@ public class CardDeliveryFormTest {
         $("[class=checkbox__box]").click();
         $("[class=button__text]").click();
         $("div.notification__title").shouldHave(exactText("Успешно!"), Duration.ofSeconds(20));
+        $(".notification__content")
+                .shouldHave(Condition.text("Встреча успешно забронирована на " + valueDate), Duration.ofSeconds(15))
+                .shouldBe(Condition.visible);
     }
 }
